@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Козявка Поддубной</title>
+  <link rel="icon" href="./фото/Фото.png" type="image/png">
+  <link rel="apple-touch-icon" href="./фото/Фото.png">
+  <link rel="stylesheet" href="Билик.css">
+</head>
+
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">КiРiПСiК</span>
+        </div>
+        <button class="new-chat" type="button" onclick="location.reload()">Нью писать</button>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Сегоднёсть</div>
+        <button class="chat-row active" type="button" onclick="quickAsk('Объясни теорему Пифагора просто')">Выбор правильных слов и запо...</button>
+        <button class="chat-row" type="button" onclick="quickAsk('Как подготовиться к контрольной?')">Подготовка к контрольной</button>
+        <button class="chat-row" type="button" onclick="quickAsk('Как справиться со стрессом перед экзаменом?')">Стресс перед экзаменом</button>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">7 Days</div>
+        <button class="chat-row" type="button" onclick="quickAsk('Составь план подготовки на неделю')">План подготовки на неделю</button>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="user-pill"></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="hero">
+          <img class="site-logo" src="фото/Фото.png" alt="Билик" onerror="this.style.display='none'">
+          <h1>Чем помолочить?</h1>
+        </div>
+
+        <div id="chat-container" class="chat">
+          <div id="messages"></div>
+
+          <div class="composer">
+            <div class="composer-bar">
+              <div class="composer-stack">
+                <input id="user-input" placeholder="Написаность КiРiВiНОСТЬ" onkeypress="if(event.key==='Enter') sendMessage()">
+                <div class="composer-chips">
+                  <button class="chip" type="button"><span class="chip-dot" aria-hidden="true"></span>КiРiПСiКОВИЧЬ</button>
+                  <button class="chip" type="button"><span class="chip-dot" aria-hidden="true"></span>Поисковость</button>
+                </div>
+              </div>
+              <button class="send" type="button" onclick="sendMessage()" aria-label="Send">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M7 11L20 4L13 17L11 13L7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="Билик.js"></script>
+</body>
+</html>
